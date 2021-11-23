@@ -6,8 +6,6 @@ E5自动续期程序，但是不保证续期
 查询系api：onedrive,outkook,notebook,site等
 创建系api: 自动发送邮件，上传文件，修改excel等
 相关
-AutoApi: https://github.com/wangziyingwen/AutoApi
-错误及解决办法/续期相关知识/更新日志：https://github.com/wangziyingwen/Autoapi-test
 大部分错误说明已更新进程序，详细请运行后看action日志报告
 视频教程：
 B站：https://www.bilibili.com/video/BV185411n7Mq/
