@@ -28,15 +28,11 @@ GIHTHUB方面的准备工作 （获取Github密钥、设置secret）
 第一步，注册应用，获取应用id、secret
 
 1）点击打开仪表板，左边点击所有服务，找到应用注册，点击+新注册
-image
+
 
 2）填入名字，受支持账户类型前三任选，重定向填入 http://localhost:53682/ ，点击注册
-image
 
 3）复制应用程序（客户端）ID到记事本备用(获得了应用程序ID！)，点击左边管理的证书和密码，点击+新客户端密码，点击添加，复制新客户端密码的值保存（获得了应用程序密码！）
-image
-
-image
 
 4）点击左边管理的API权限，点击+添加权限，点击常用Microsoft API里的Microsoft Graph(就是那个蓝色水晶)， 点击委托的权限，然后在下面的条例选中下列需要的权限，最后点击底部添加权限
 赋予api权限的时候，选择以下12个
@@ -48,17 +44,10 @@ image
           Mail.Send、Notes.ReadWrite.All、People.Read.All、
           
           Sites.ReadWrite.All、Tasks.ReadWrite、User.ReadWrite.All
-image
-
-image
-
-image
 
 5）添加完自动跳回到权限首页，点击代表授予管理员同意
 
 如若是子号运行，请用管理员账号登录仪表板找到子号注册的应用，点击“代表管理员授权”。
-
-image
 
 第二步，获取refresh_token(微软密钥)
 
@@ -67,31 +56,20 @@ image
       ./rclone authorize "onedrive" "应用程序(客户端)ID" "应用程序密码"
 2）在那一串东西里找到 "refresh_token"：" ，从双引号开始选中到 ","expiry":2021 为止（就是refresh_token后面双引号里那一串，不要双引号），如下图，右键复制保存（获得了微软密钥）
 
-image
-
 GITHUB方面的准备工作
 第一步，fork本项目
 
 登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。
 
-image
-
 第二步，新建github密钥
 
 1）进入你的个人设置页面 (右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings -> Personal access tokens -> Generate new token
-image
-
-image
 
 2）设置名字为 GH_TOKEN , 然后勾选repo，点击 Generate token ，最后复制保存生成的github密钥（获得了github密钥，一旦离开页面下次就看不到了！）
-image
 
 第三步，新建secret
 
 1）依次点击页面上栏右边的 Setting -> 左栏 Secrets -> 右上 New repository secret，新建6个secret： GH_TOKEN、MS_TOKEN、CLIENT_ID、CLIENT_SECRET、CITY、EMAIL
-image
-
-image
 
 (以下填入内容注意前后不要有空格空行)
 
@@ -133,8 +111,6 @@ EMAIL
 再点击上面的Action选择Run api.Read或者api.Write流程 -> build -> run api 就能看到每次的运行日志
 
 （必需点进去build里面的run api.XXX看下，api有没有调用到位，操作有没有成功，有没有出错）
-
-image
 
 3）再点两次星星，查看是否能再次成功运行
 
